@@ -15,6 +15,19 @@ echo Parameter must be a file.
 exit
 fi
 
+#check if httpd is already running. If not start httpd
+#grep here only shows httpd processes run with UID apache.
+
+httpd_processes=`ps -ef | grep '^apache.*httpd'`
+if [ -z "$httpd_processes" ]
+then
+echo Trying to start httpd
+service httpd start
+else
+echo httpd is already running
+fi
+
+
 #check if one of the temporary files used already exist
 if [ -f /tmp/inputfile.sha1 -o -f /tmp/inputfile.md5 ]
 then
@@ -30,7 +43,8 @@ md5sum $1 | awk '{print $1}' > /tmp/inputfile.md5
 
 #copy the file to the new serving directory
 cp $1 /var/www/html/sub/
-a
+
+#Download the file via http from localhost
 curl http://localhost/sub/$1 > /tmp/downloadfile.tmp
 
 #Create diff of both hashes
