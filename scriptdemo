@@ -1,0 +1,33 @@
+Script started on Sun 06 Dec 2015 16:03:51 GMT
+[root@localhost oss-coursework]# ls -Zd /(v[K[K[K[K[K[K[K[K[K[Kecho "hel[K[K[KHello World "[K[K[Kd" >demo[K[K[K[K deM[Kmo [KFile
+[root@localhost oss-coursework]# ./copyscript.sh demoFile 
+httpd is already running
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   221  100   221    0     0  12178      0 --:--:-- --:--:-- --:--:-- 13000
+./copyscript.sh: line 57: [: too many arguments
+Found difference in hashes. Download was not successful
+[root@localhost oss-coursework]# ls -Z /c[Kvar/newwww
+unconfined_u:object_r:var_t:s0 demoFile
+unconfined_u:object_r:var_t:s0 file.html
+[root@localhost oss-coursework]# rm /var/newwww/demoFile 
+rm: remove regular file ‘/var/newwww/demoFile’? y
+[root@localhost oss-coursework]# rm /var/newwww/demoFile [7Pls -Z /var/newwww./copyscript.sh demoFile echo "Hello World" > demoFilexit[K./copyscript.sh demoFile [10Pls /var/newwww/rm /var/newwww/demoFile estorecon -R -v /var/newwww/semanage fcontext -a -t httpd_sys_content_t "/vaar/newwww(/.*)?"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22P./copyscript.sh demoFile 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pls -Zd /var/newwww./copyscript.sh demoFile semanage fcontext -a -t httpd_sys_content_t "/vaar/newwww(/.*)?"
+[root@localhost oss-coursework]# semanage fcontext -a -t httpd_sys_content_t "/vaar/newwww(/.*)?"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Prm /var/newwww/demoFile 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pls -Z /var/newwww./copyscript.sh demoFile echo "Hello World" > demoFilexit[K./copyscript.sh demoFile [10Pls /var/newwww/rm /var/newwww/demoFile estorecon -R -v /var/newwww/semanage fcontext -a -t httpd_sys_content_t "/vaar/newwww(/.*)?"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Prestorecon -R -v /var/newwww/
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+restorecon reset /var/newwww context unconfined_u:object_r:var_t:s0->unconfined_u:object_r:httpd_sys_content_t:s0
+restorecon reset /var/newwww/file.html context unconfined_u:object_r:var_t:s0->unconfined_u:object_r:httpd_sys_content_t:s0
+[root@localhost oss-coursework]# ./copyscript.sh demoFile 
+httpd is already running
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    12  100    12    0     0    227      0 --:--:-- --:--:-- --:--:--   226
+md5 and sha1 both are matching. Download succesful
+[root@localhost oss-coursework]# ls -Z /var/newwww
+unconfined_u:object_r:httpd_sys_content_t:s0 demoFile
+unconfined_u:object_r:httpd_sys_content_t:s0 file.html
+[root@localhost oss-coursework]# exit
+
+Script done on Sun 06 Dec 2015 16:06:01 GMT
